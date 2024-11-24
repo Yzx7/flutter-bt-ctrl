@@ -173,7 +173,7 @@ class _HomeState extends State<Home> {
                                     children: [
                                   for (final device in ctxWatch.devices)
                                     ListTile(
-                                      title: Text(device.device.advName),
+                                      title: Text(device.device.advName.isEmpty ? device.device.platformName : device.device.advName),
                                       trailing: TextButton(
                                         child: Text(device.device.isConnected ? "desconectar" : 'conectar'),
                                         onPressed: () async {
